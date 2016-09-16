@@ -12,7 +12,7 @@ _This site allows users to enter a search word and a sentence or text in which t
 
 | Behavior      | Input       |Output|
 | ------------- |-------------| -----|
-| Spec 1: If no words in the sentence match the input, the program returns no results. This is the simplest default behavior and requires the least amount of code to implement. The behavior will be tested by returning a result of 0 if there is no match. | Search Word: "This" / String: "Banana" | 0 Matches |
+| Spec 1: If no words in the sentence match the input, the program returns no results. This is the simplest default behavior and requires the least amount of code to implement. The behavior will be tested by returning a result of false if there is no match. | Search Word: "This" / String: "Banana" | false |
 | Spec 2: If the search word matches a single word string, the program will return "true" This is the next simplest behavior because the strings can be compared easily without any search methods needing to be used to manipulate the text. | Search Word: "This" / String: "This" | true |
 | Spec 3: The program will return true on word matches regardless of character case. This is relatively easy to implement by applying a standard format to both inputs. | Search Word: "this" / String: "This" | true |
 | Spec 4: The program will ignore common punctuation when determining a match. This is slightly more difficult because unlike upper or lower case, the text to search could include any number or combination of different punctuation marks.| Search Word: "this" / String: "This!" | true |

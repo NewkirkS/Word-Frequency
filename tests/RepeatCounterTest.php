@@ -12,14 +12,24 @@
             $this->assertEquals("That", $test_counter->getSearchText());
         }
 
-        function testMatch()
+        function test_matchWord_noMatch()
         {
             //Arrange
-            $test_counter = new RepeatCounter("This", "That");
+            $test_counter = new RepeatCounter("This", "Banana");
             //Act
             $test_counter->matchWord();
             //Assert
-            $this->assertEquals(0, $test_counter->getMatches());
+            $this->assertEquals(false, $test_counter->matchWord());
+        }
+
+        function test_matchWord_match()
+        {
+            //Arrange
+            $test_counter = new RepeatCounter("This", "This");
+            //Act
+            $test_counter->matchWord();
+            //Assert
+            $this->assertEquals(true, $test_counter->Matches());
         }
     }
  ?>

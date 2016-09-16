@@ -36,7 +36,12 @@
 
         function matchWord()
         {
-            
+            // if ($this->search_word == $this->search_text) {
+            //     return true;
+            // } else {
+            //     return false;
+            // }
+            return false;
         }
 
         function CountRepeats($word, $text)
