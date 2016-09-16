@@ -36,7 +36,7 @@
 
         function matchWord($word, $text_word)
         {
-            if ($word == $text_word) {
+            if (strtolower($word) == strtolower($text_word)) {
                 $this->addMatch();
             }
         }

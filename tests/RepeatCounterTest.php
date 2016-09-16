@@ -31,5 +31,15 @@
             //Assert
             $this->assertEquals(1, $test_counter->getMatches());
         }
+
+        function test_matchWord_ignoreCase()
+        {
+            //Arrange
+            $test_counter = new RepeatCounter("this", "This");
+            //Act
+            $test_counter->matchWord($test_counter->getSearchWord(), $test_counter->getSearchText());
+            //Assert
+            $this->assertEquals(1, $test_counter->getMatches());
+        }
     }
  ?>
