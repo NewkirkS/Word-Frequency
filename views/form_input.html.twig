@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="styles/styles.css">
+        <title>Word Frequency Search</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Word Frequency</h1>
+            <p>
+                Use the fields below to see how frequently a word appears in a given text.
+            </p>
+            <hr>
+            <form action="/results">
+                <div class="form-group">
+                    <label for="word">Search Word:</label>
+                    <input type="text" name="word" class="form-control">
+                </div>
+                <div class="form-group">
+                    <label for="word">Text:</label>
+                    <textarea name="text" rows="5" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn">Search</button>
+            </form>
+        </div>
+    </body>
+</html>
