@@ -1,5 +1,5 @@
 <?php
-    class WordFrequency
+    class RepeatCounter
     {
         private $search_word;
         private $search_text;
@@ -32,6 +32,16 @@
         function addMatch()
         {
             $this->matches += 1;
+        }
+
+        function matchWord()
+        {
+            
+        }
+
+        function CountRepeats($word, $text)
+        {
+
         }
     }
  ?>
