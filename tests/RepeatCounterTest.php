@@ -19,7 +19,7 @@
             //Act
             $test_counter->matchWord();
             //Assert
-            $this->assertEquals(false, $test_counter->matchWord());
+            $this->assertEquals(0, $test_counter->getMatches;
         }
 
         function test_matchWord_match()
@@ -29,7 +29,7 @@
             //Act
             $test_counter->matchWord();
             //Assert
-            $this->assertEquals(true, $test_counter->Matches());
+            $this->assertEquals(true, $test_counter->getMatches());
         }
     }
  ?>
