@@ -17,9 +17,9 @@
             //Arrange
             $test_counter = new RepeatCounter("This", "Banana");
             //Act
-            $test_counter->matchWord();
+            $test_counter->matchWord($test_counter->getSearchWord(), $test_counter->getSearchText());
             //Assert
-            $this->assertEquals(0, $test_counter->getMatches;
+            $this->assertEquals(0, $test_counter->getMatches());
         }
 
         function test_matchWord_match()
@@ -27,9 +27,9 @@
             //Arrange
             $test_counter = new RepeatCounter("This", "This");
             //Act
-            $test_counter->matchWord();
+            $test_counter->matchWord($test_counter->getSearchWord(), $test_counter->getSearchText());
             //Assert
-            $this->assertEquals(true, $test_counter->getMatches());
+            $this->assertEquals(1, $test_counter->getMatches());
         }
     }
  ?>

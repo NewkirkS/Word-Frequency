@@ -34,14 +34,11 @@
             $this->matches += 1;
         }
 
-        function matchWord()
+        function matchWord($word, $text_word)
         {
-            // if ($this->search_word == $this->search_text) {
-            //     return true;
-            // } else {
-            //     return false;
-            // }
-            return false;
+            if ($word == $text_word) {
+                $this->addMatch();
+            }
         }
 
         function CountRepeats($word, $text)
