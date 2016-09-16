@@ -36,7 +36,11 @@
 
         function matchWord($word, $text_word)
         {
-            if (strtolower($word) == strtolower($text_word)) {
+            $word = strtolower($word);
+            $text_word = strtolower($text_word);
+            $word = trim($word, " .,:;/'\+=_-!'%*)()*#@");
+            $text_word = trim($text_word, " .,:;/'\+=_-!'%*)()*#@");
+            if ($word == $text_word) {
                 $this->addMatch();
             }
         }
