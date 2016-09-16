@@ -45,9 +45,16 @@
             }
         }
 
-        function CountRepeats($word, $text)
+        function countRepeats($word, $text)
         {
-
+            if (strchr($text, " ") !== false) {
+                $this->text_array = explode(" ", $text);
+                foreach($this->text_array as $text_word) {
+                    $this->matchWord($word, $text_word);
+                }
+            } else {
+                $this->matchWord($word, $text);
+            }
         }
     }
  ?>

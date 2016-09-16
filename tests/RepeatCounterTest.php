@@ -51,5 +51,15 @@
             //Assert
             $this->assertEquals(1, $test_counter->getMatches());
         }
+
+        function test_countRepeats()
+        {
+            //Arrange
+            $test_counter = new RepeatCounter("this", "This is a test. I am testing this!");
+            //Act
+            $test_counter->countRepeats($test_counter->getSearchWord(), $test_counter->getSearchText());
+            //Assert
+            $this->assertEquals(2, $test_counter->getMatches());
+        }
     }
  ?>
