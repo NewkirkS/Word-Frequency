@@ -8,10 +8,19 @@
     </head>
     <body>
         <h1>Word Frequency</h1>
-        <p>
-            Use the fields below to see how frequently a word appears in a given text.
-        </p>
         <hr>
-
+        {% if  repeat_counter.getMatches == 0 %}
+            <h3>No matches found for the word "{{ repeat_counter.getSearchWord }}" in the text</h3>
+            <hr>
+            <a href="/">Back</a>
+        {% elseif  repeat_counter.getMatches == 1 %}
+            <h3>1 match found for the word "{{ repeat_counter.getSearchWord }}" in the text</h3>
+            <hr>
+            <a href="/">Back</a>
+        {% else %}
+        <h3>{{ repeat_counter.getMatches }} matches found for word "{{ repeat_counter.getSearchWord }}" in the text</h3>
+        <hr>
+        <a href="/">Back</a>
+        {% endif %}
     </body>
 </html>
